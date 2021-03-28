@@ -47,11 +47,14 @@ export class NasaStore {
     }
 
     async addImageToFav(fav) {
+        this.favs.push(fav)
         await axios.post('/favourite', fav)
     }
 
 
     async removeImageFromFav(id) {
+        const index = this.favs.findIndex(d => d._id === id)
+        if (index !== -1) this.favs.splice(index, 1);
         await axios.delete(`/favourite/${id}`)
     }
 
