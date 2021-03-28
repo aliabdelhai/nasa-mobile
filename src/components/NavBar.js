@@ -16,7 +16,7 @@ function NavBar() {
              <Link to="/search">search</Link>
             </div>
             <div className="nav-link-wrapper">
-              <Link to="/favourites">Favourites</Link>
+              <Link to="/favouritess">Favourites</Link>
             </div>
           </div>
 

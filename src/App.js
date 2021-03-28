@@ -18,7 +18,7 @@ function App(props) {
         <NavBar />
         <Route path="/" exact render={() => <Home/>} />
         <Route path="/search" exact render={() => <Search />} />
-        <Route path="/favourites" exact render={() => <Favourites favs={props.nasaStore.favs} />} />
+        <Route path="/favouritess" exact render={() => <Favourites favs={props.nasaStore.favs} />} />
         <Route path="/favourite/:id" exact render={({match}) => <Favourites match={match} favs={[props.nasaStore.favs.find(f => f._id === match.params.id )]}/>} />
 
     </Router>
