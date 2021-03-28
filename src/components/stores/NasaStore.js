@@ -31,7 +31,6 @@ export class NasaStore {
     async getFavs() {
         const favs = await axios.get('/favourites')
         this.favs = favs.data
-        console.log(this.favs)
     }
 
     async searchFor(input) {
@@ -53,9 +52,9 @@ export class NasaStore {
 
 
     async removeImageFromFav(id) {
+        await axios.delete(`/favourite/${id}`)
         const index = this.favs.findIndex(d => d._id === id)
         if (index !== -1) this.favs.splice(index, 1);
-        await axios.delete(`/favourite/${id}`)
-    }
 
+    }
 }
