@@ -32,7 +32,7 @@ function MediaCard(props) {
 
     return (
         <div >
-            {location == "/favourites" ?
+            {location == "/favouritess" ?
                 <Link to={`/favourite/${props.info._id}`}>
                     <CardMedia component="img" alt="photo" width="100%" image={props.info.imgUrl} title={props.info.title} />
                  </Link>
