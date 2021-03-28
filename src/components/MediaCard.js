@@ -17,7 +17,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 function MediaCard(props) {
 
-    const [like, setLike] = useState(false)
     const location = useLocation().pathname
 
     const addImageToFav = function () {
@@ -43,7 +42,7 @@ function MediaCard(props) {
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">{props.info.title}</Typography>
                 {<Typography variant="body2" color="textSecondary" component="p">{props.info.explanation}</Typography>}
-                {!location.includes('/favourites') ?
+                {!location.includes('/favouritess') ?
                 <Typography variant="body2" color="textSecondary" component="p">{props.info.description}</Typography>: null}
 
             </CardContent>
@@ -51,7 +50,7 @@ function MediaCard(props) {
 
             <CardActions style={{ justifyContent: 'center' }}>
                 <Button size="small" color="primary" >
-                    {location == "/favourites" ?
+                    {location == "/favouritess" ?
                         <FavoriteIcon color="action" fontSize="large" style={{ color: 'red' }} onClick={removeImageFromFav} /> 
                         : location == "/search" ? 
                         <FavoriteBorderIcon color="action" fontSize="large" style={{ color: 'red' }} onClick={addImageToFav} />
