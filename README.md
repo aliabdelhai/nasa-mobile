@@ -48,4 +48,7 @@ npm run-script develop
 
 ### Screenshots
 
-## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616776321/Screen_Shot_2021-03-26_at_7.31.19_PM_f74sh4.png" width="500"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616950917/Screen_Shot_2021-03-28_at_7.56.35_PM_ji46se.png" width="500"> </p>
+<p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616950917/Screen_Shot_2021-03-28_at_7.58.47_PM_k9txiq.png" width="500"> </p>
+<p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616950917/Screen_Shot_2021-03-28_at_7.57.04_PM_k7lnsw.png" width="500"> </p>
+<p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616950917/Screen_Shot_2021-03-28_at_8.00.26_PM_acidds.png" width="500"> </p>
