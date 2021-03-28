@@ -33,7 +33,7 @@ npm run-script develop
 
 ### Tools and Libraries
 
-- Client Side - React, Material UI
+- Client Side - React, Material UI, Mobx
 - Server - NodeJs, Express
 - DataBase - MongoDB, Mongoose
 - External Services: [Nasa Api](https://api.nasa.gov/)
