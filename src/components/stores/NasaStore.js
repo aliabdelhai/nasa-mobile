@@ -47,7 +47,7 @@ export class NasaStore {
     }
 
     async addImageToFav(fav) {
-        this.favs.push(fav)
+        // this.favs.push(fav)
         await axios.post('/favourite', fav)
     }
 
