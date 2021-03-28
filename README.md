@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# NasApp 🛰🪐
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### A Fullstack Nasa info and images App.
 
-## Available Scripts
+Display images and information from the Nasa Api. the user can search for information and save to DB his favorite results.
+Design for mobile.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## How to Use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Use the search-bar to look for interesting stuff from Nasa
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Click the Like button or the dislike button to add / remove photos to favorites.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## To Run on localhost
 
-### `npm run build`
+1. run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+node server.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. run
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run-script develop
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Tools and Libraries
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Client Side - React, Material UI, Mobx
+- Server - NodeJs, Express
+- DataBase - MongoDB, Mongoose
+- External Services: [Nasa Api](https://api.nasa.gov/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### To Do
 
-## Learn More
+- [ ] add users manager (signin/register)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Screenshots
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616950917/Screen_Shot_2021-03-28_at_7.56.35_PM_ji46se.png" height="550" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616950917/Screen_Shot_2021-03-28_at_7.58.47_PM_k9txiq.png" height="550"  width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616950917/Screen_Shot_2021-03-28_at_7.57.04_PM_k7lnsw.png" height="550"  width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1616950917/Screen_Shot_2021-03-28_at_8.00.26_PM_acidds.png" height="550"  width="300"> </p>
