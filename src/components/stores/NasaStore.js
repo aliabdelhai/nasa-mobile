@@ -9,9 +9,6 @@ export class NasaStore {
         makeObservable(this, {
             favs: observable,
             search: observable,
-            addFavs: action,
-            deleteFavs: action,
-            getFavs: action,
             searchFor: action,
             addImageToFav: action,
             removeImageFromFav: action
@@ -20,18 +17,6 @@ export class NasaStore {
         })
     }
 
-    async deleteFavs(id) {
-        await axios.delete(`/favourite/${id}`)
-    }
-
-    async addFavs(input) {
-        await axios.post("/favourite", input)
-    }
-
-    async getFavs() {
-        const favs = await axios.get('/favourites')
-        this.favs = favs.data
-    }
 
     async searchFor(input) {
         let response = await axios.get(`https://images-api.nasa.gov/search?q=${input}&media_type=image`)
@@ -51,7 +36,7 @@ export class NasaStore {
     }
 
 
-    async removeImageFromFav(id) {
+    async removeImageFromFav(id){
         await axios.delete(`/favourite/${id}`)
         const index = this.favs.findIndex(d => d._id === id)
         if (index !== -1) this.favs.splice(index, 1);

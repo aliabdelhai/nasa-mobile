@@ -13,33 +13,25 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import Button from '@material-ui/core/Button';
 import { useLocation, Link } from 'react-router-dom';
 import ReactSnackBar from "react-js-snackbar";
+import { AddOneStore } from './stores/AddOneStore';
 
 
 function MediaCard(props) {
-    const [sh, setSh] = useState({show: false, showing: false})
 
 
     const location = useLocation().pathname
 
-    const addImageToFav = function () {
-        if (sh.Showing) return;
-        setSh({show: true, showing:true})
-        setTimeout(() => {
-          setSh({show: false, showing:false});
-        }, 2000);
-        const fav = { title: props.info.title, imgUrl: props.info.imgUrl, description: props.info.explanation }
+    const add = function () {
+        const fav = new AddOneStore(props.info.title, props.info.imgUrl, props.info.explanation)
         props.nasaStore.addImageToFav(fav)
     }
 
-    const removeImageFromFav = function () {
-        if (sh.Showing) return;
-        setSh({show: true, showing:true})
-        setTimeout(() => {
-          setSh({show: false, showing:false});
-        }, 2000);
+    const remove =  ()=> {
         props.nasaStore.removeImageFromFav(props.info._id)
+       
     }
 
+  
    
 
     return (
@@ -63,18 +55,11 @@ function MediaCard(props) {
             <CardActions style={{ justifyContent: 'center' }}>
                 <Button size="small" color="primary" >
                     {location == "/favouritess" ?
-                        <FavoriteIcon color="action" fontSize="large" style={{ color: 'red' }} onClick={removeImageFromFav} /> 
+                        <FavoriteIcon color="action" fontSize="large" style={{ color: 'red' }} onClick={remove} /> 
                         : location == "/search" ? 
-                        <FavoriteBorderIcon color="action" fontSize="large" style={{ color: 'red' }} onClick={addImageToFav} />
+                        <FavoriteBorderIcon color="action" fontSize="large" style={{ color: 'red' }} onClick={add} />
                         : null} 
-                        {location == "/favouritess" ? 
-                         <ReactSnackBar Icon={<span>🦄</span>} Show={sh.show}>
-                                The image has been removed!
-                            </ReactSnackBar> : 
-                            <ReactSnackBar Icon={<span>🦄</span>} Show={sh.show}>
-                            The image has been added!
-                        </ReactSnackBar>
-                        }
+                         
                             
                 </Button>
             </CardActions>

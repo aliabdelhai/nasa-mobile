@@ -1,12 +1,9 @@
 import '../styles//favourites.css';
+import { observer, inject } from 'mobx-react'
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { useEffect } from 'react';
-import { useState } from 'react';
-import axios from 'axios';
 import MediaCard from './MediaCard';
 import { makeStyles } from '@material-ui/core/styles';
-import { ContactsOutlined } from '@material-ui/icons';
+
 const useStyles = makeStyles((theme) => ({
   gridCard: {
       display: "grid",
@@ -19,16 +16,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
 function Favourites(props) {
+
   const classes = useStyles();
   return (
         <div className={classes.gridCard}>
-          {props.favs.map(f=> <MediaCard info={f} key={f._id}/>)}   
-
+          {props.favs.map(f=> <MediaCard info={f} key={f._id} />)}   
         </div>
 
  
   );
 }
 
-export default Favourites;
+export default inject("nasaStore")(observer(Favourites))
+
