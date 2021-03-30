@@ -5,29 +5,23 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 function NavBar() {
   return (
-     
-        <div className="nav-wrapper">
 
-          <div className="left-side">
-            <div className="nav-link-wrapper">
-              <Link to="/">home</Link>
-            </div>
-            <div className="nav-link-wrapper">
-             <Link to="/search">search</Link>
-            </div>
-            <div className="nav-link-wrapper">
-              <Link to="/favouritess">Favourites</Link>
-            </div>
-          </div>
 
-          <div className="right-side">
-            <div className="nav-link-wrapper">
-              <img id='nasaImg' src="https://cdn.mos.cms.futurecdn.net/baYs9AuHxx9QXeYBiMvSLU.jpg" />
-            </div>
-          </div>
-        </div>
+    <div >
+      <ul>
+        <li style={{ marginTop: 10}}><Link to="/">Home</Link></li>
+        <li style={{ marginTop: 10}}><Link to="favouritess">Favourites</Link></li>
+        <li style={{ marginTop: 10}}><Link to="search">Search</Link></li>
+        <li style={{ float: 'right' }}><Link to="/"> <img id='nasaImg' src="https://cdn.mos.cms.futurecdn.net/baYs9AuHxx9QXeYBiMvSLU.jpg" /></Link></li>
+      </ul>
 
- 
+    </div>
+
+
+
+
+
+
   );
 }
 
